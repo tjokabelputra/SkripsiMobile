@@ -1,14 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.add.AddApkFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/white">
 
+        <TextView
+            android:id="@+id/tvAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/add_apk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="@string/add_apk_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvAddTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/upload_section"
+            android:layout_width="0dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_file_upload"
+            app:layout_constraintEnd_toEndOf="@+id/tvAddDesc"
+            app:layout_constraintStart_toStartOf="@+id/tvAddDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDesc">
+
+            <ImageView
+                android:id="@+id/imgUpload"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/file"
+                app:layout_constraintBottom_toTopOf="@+id/tvUploadDesc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvUploadDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/upload_desc"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgUpload" />
+
+            <TextView
+                android:id="@+id/tvClearFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/clear_upload"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUploadDesc" />
+
+            <ProgressBar
+                android:id="@+id/pgUpload"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:indeterminate="true"
+                android:max="100"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUploadDesc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

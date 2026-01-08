@@ -3,13 +3,13 @@
     <item
         android:id="@+id/navigation_add"
         android:icon="@drawable/ic_add"
-        android:title="Add APK"/>
+        android:title="@string/add_apk"/>
     <item
         android:id="@+id/navigation_list"
         android:icon="@drawable/ic_list"
-        android:title="APK List" />
+        android:title="@string/apk_list" />
     <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/ic_settings"
-        android:title="Settings"/>
+        android:title="@string/settings"/>
 </menu>

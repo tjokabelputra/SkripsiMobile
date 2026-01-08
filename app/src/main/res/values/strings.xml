@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Malware Detection</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_apk">Add APK</string>
+    <string name="apk_list">APK List</string>
+    <string name="settings">Settings</string>
+    <string name="add_apk_desc">Upload APK untuk dilakukan ekstraksi fitur sebelum dilakukan pengecekan</string>
+    <string name="upload_desc">Pencet untuk Upload APK</string>
+    <string name="upload_btn">Upload APK</string>
+    <string name="preparing_apk">Preparing APK...</string>
+    <string name="clear_upload">Clear Upload</string>
 </resources>
