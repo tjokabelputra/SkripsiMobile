@@ -1,6 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.settings.SettingsFragment"/>
+    android:background="@color/white"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/settings"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSettingsDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/settings_desc"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvSettingsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSettingsTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/darkmodeSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/tvSettingsDesc"
+            app:layout_constraintStart_toStartOf="@+id/tvSettingsDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvSettingsDesc">
+
+            <TextView
+                android:id="@+id/tvDarkModeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/dark_mode"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/dark_mode_desc"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/switchCompat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDarkModeTitle" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat"
+                android:layout_width="104dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mdnsSection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/darkmodeSection"
+            app:layout_constraintStart_toStartOf="@+id/darkmodeSection"
+            app:layout_constraintTop_toBottomOf="@+id/darkmodeSection">
+
+            <TextView
+                android:id="@+id/tvmdnsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mdns"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvServiceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/service_name"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvmdnsTitle" />
+
+            <TextView
+                android:id="@+id/tvServiceNameContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/service_name_placeholder"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnConnect"
+                app:layout_constraintStart_toEndOf="@+id/tvServiceName"
+                app:layout_constraintTop_toTopOf="@+id/tvServiceName" />
+
+            <TextView
+                android:id="@+id/tvServiceUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/service_url"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvServiceNameContent" />
+
+            <TextView
+                android:id="@+id/tvServiceUrlContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/url_placeholder"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnConnect"
+                app:layout_constraintStart_toEndOf="@+id/tvServiceUrl"
+                app:layout_constraintTop_toTopOf="@+id/tvServiceUrl" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="136dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_btn_mdns"
+                android:text="@string/connect_mdns"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

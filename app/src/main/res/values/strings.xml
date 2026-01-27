@@ -9,4 +9,13 @@
     <string name="upload_btn">Upload APK</string>
     <string name="preparing_apk">Preparing APK...</string>
     <string name="clear_upload">Clear Upload</string>
+    <string name="settings_desc">Atur penampilan aplikasi berdasarkan mode gelap atau terang</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="dark_mode_desc">Aktifkan mode gelap untuk tampilan yang nyaman dalam cahaya redup</string>
+    <string name="mdns">mDNS</string>
+    <string name="connect_mdns">Connect mDNS</string>
+    <string name="service_name">Service Name:</string>
+    <string name="service_name_placeholder">Name Placeholder</string>
+    <string name="service_url">Service Url:</string>
+    <string name="url_placeholder">Url Placeholder</string>
 </resources>
