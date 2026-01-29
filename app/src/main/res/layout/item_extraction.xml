@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightblue">
+
+        <View
+            android:id="@+id/vStatusColor"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            android:background="@color/yellow"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvApkName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="apk.apk"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toStartOf="@+id/vDeleteBackground"
+            card_view:layout_constraintStart_toEndOf="@+id/vStatusColor"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvExtractionDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1 January 1970 00:00:00"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            card_view:layout_constraintEnd_toEndOf="@+id/tvApkName"
+            card_view:layout_constraintStart_toStartOf="@+id/tvApkName"
+            card_view:layout_constraintTop_toBottomOf="@+id/tvApkName" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Status: "
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/tvExtractionDate"
+            card_view:layout_constraintTop_toBottomOf="@+id/tvExtractionDate" />
+
+        <TextView
+            android:id="@+id/tvStatusContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="processing"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tvStatus"
+            card_view:layout_constraintStart_toEndOf="@+id/tvStatus"
+            card_view:layout_constraintTop_toTopOf="@+id/tvStatus" />
+
+        <View
+            android:id="@+id/vDeleteBackground"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="@color/red"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="@+id/vDeleteBackground"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="@+id/vDeleteBackground"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:srcCompat="@drawable/ic_delete"
+            card_view:tint="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

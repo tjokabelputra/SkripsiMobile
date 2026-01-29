@@ -1,7 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <attr name="colorFailed" format="color"/>
+    <attr name="colorCompleted" format="color"/>
     <style name="Base.Theme.MalwareDetection" parent="Theme.Material3.DayNight">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!--Status Indicator Color-->
+        <item name="colorCompleted">@color/green</item>
+        <item name="colorFailed">@color/red</item>
     </style>
 </resources>

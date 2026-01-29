@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <attr name="colorFailed" format="color"/>
+    <attr name="colorCompleted" format="color"/>
     <style name="Base.Theme.MalwareDetection" parent="Theme.Material3.DayNight">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--Status Indicator Color-->
+        <item name="colorCompleted">@color/green</item>
+        <item name="colorFailed">@color/red</item>
     </style>
 
     <style name="Theme.MalwareDetection" parent="Base.Theme.MalwareDetection" />
