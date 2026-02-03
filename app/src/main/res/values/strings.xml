@@ -19,4 +19,5 @@
     <string name="service_url">Service Url:</string>
     <string name="url_placeholder">Url Placeholder</string>
     <string name="apk_list_desc">Daftar APK yang telah diupload beserta status dari masing masing eksktraksi</string>
+    <string name="res_desc">Berikut adalah informasi mengenai APK yang telah dilakukan ekstraksi</string>
 </resources>
