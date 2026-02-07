@@ -82,7 +82,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvApkName"
-            app:layout_constraintTop_toBottomOf="@+id/tvApkName" />
+            app:layout_constraintTop_toBottomOf="@+id/tvApkNameContent" />
 
         <TextView
             android:id="@+id/tvApkSizeContent"
@@ -211,6 +211,7 @@
             android:layout_marginEnd="16dp"
             android:text="Server"
             android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/cbLocal"
             app:layout_constraintStart_toStartOf="@+id/tvType"
             app:layout_constraintTop_toBottomOf="@+id/tvType" />
@@ -222,6 +223,7 @@
             android:layout_marginStart="16dp"
             android:text="Local"
             android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/cbServer"
             app:layout_constraintTop_toTopOf="@+id/cbServer" />
 
@@ -238,7 +240,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cbServer" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/cbANN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -246,6 +248,18 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/tvModel"
+            app:layout_constraintTop_toBottomOf="@+id/tvModel" />
+
+        <CheckBox
+            android:id="@+id/cbEnsemble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Ensemble"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/cbANN"
             app:layout_constraintTop_toBottomOf="@+id/tvModel" />
 
         <Button
@@ -262,7 +276,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintTop_toBottomOf="@+id/cbANN" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ProgressBar
