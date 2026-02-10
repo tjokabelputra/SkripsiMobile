@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.skripsi.malware_detection"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.play.services.tflite.gpu)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,4 +67,8 @@ dependencies {
 
     //Swipe Refresh
     implementation(libs.androidx.swiperefreshlayout)
+
+    //TFLite
+    implementation(libs.play.services.tflite.java)
+    implementation(libs.tensorflow.lite.gpu)
 }
