@@ -21,4 +21,9 @@
     <string name="apk_list_desc">Daftar APK yang telah diupload beserta status dari masing masing eksktraksi</string>
     <string name="res_desc">Berikut adalah informasi mengenai APK yang telah dilakukan ekstraksi</string>
     <string name="tflite_is_not_initialized_yet">TfLite is not initialized yet</string>
+    <string name="tab_add">Add APK</string>
+    <string name="tab_scan">Scan APK</string>
+    <string name="scan_apk">Scan APK</string>
+    <string name="scan_apk_desc">Scan APK dari perangkat untuk mengetahui apakah terdapat aplikasi berbahaya pada perangkat</string>
+    <string name="apk_size_format">APK Size = %.2f %s</string>
 </resources>
